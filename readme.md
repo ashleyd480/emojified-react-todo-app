@@ -14,7 +14,7 @@ The app is designed with both mobile/desktop reponsiveness, and consists of two 
 1. Main - The main title and the blurb about the app reside here. The one-liner about how React gets moody when there's stuff to do helps to humanize the app and allowing users to feel a personal connection.
 2. To Do - The main to-do app content exists here: the app heading, the caption describing the dynamic emoji (which represents React's current emotion), the input bar, the buttons, and the list of tasks.
 
-![UX interface](src/assets/app-screenshot.png)
+![UX interface](src/assets/app-ux-screenshot.png)
 
 When planning the layout, I host all root css in the `App.css` and render the `Main.jsx` and `ToDo.jsx` components there. The `ToDo.jsx` uses the `Button` and `List` component. All css styles for the ToDo and its aforementioend components live within `ToDo.css`.
 
