@@ -1,0 +1,70 @@
+/*to do list container */
+
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+}
+/*main button container */
+
+#todo-input {
+  margin-bottom: 25px; /* Add margin to separate buttons from input */
+  width: 350px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.main-button-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  gap: 100px;
+}
+
+#error-message {
+  color: red;
+  width: 350px;
+}
+
+/*button styling*/
+.greenBtn {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 30px; /* 10 px for top/bottom, 30 px for left/right */
+}
+
+.greenBtn:hover {
+  background-color: darkgreen;
+}
+
+.redBtn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.redBtn:hover {
+  background-color: darkred;
+}
+
+/*to do list style*/
+.to-do-row {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  padding-bottom: 15px;
+  margin-left: -40px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid gray;
+  align-content: center; /*to align the multiple lines */
+}
+
+ul#task-list {
+  list-style: none;
+}
