@@ -72,7 +72,7 @@ You start with the attribute variable and then its value in brackets.  `children
 
 
 The delete button uses the Button component defined below:
-(Notice how the props are passed with the ({props here})) syntax- and that is because the bracket ` { } ` destructures the `props` object that is implicitly passed to the Button component and the `( )` is how we pass those props along as  "parameters." Destructuring allows us to refer to the props (attributes) by their variable name instead of having to write `props.color`, ec. 
+(Notice how the props are passed with the ({props here})) syntax- and that is because the bracket ` { } ` destructures the `props` object that is implicitly passed to the Button component and the `( )` is how we pass those props along as  "parameters." Destructuring allows us to refer to the props (attributes) by their variable name instead of having to write `props.color`, etc. (In other words, within here `({ color, children, onClickFunction })` are just simply variables representing the props. Then when the button is called, that is when the values are provided.)
 
 ```
 const Button = ({ color, children, onClickFunction }) => {
