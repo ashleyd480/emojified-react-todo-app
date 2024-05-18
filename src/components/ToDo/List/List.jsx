@@ -1,4 +1,3 @@
-import Button from "../Button/Button"
 import "../ToDo.css" // navigating up to List folder- which is on same level where ToDo.css is located
 
 const List = ({ children}) => {
@@ -14,4 +13,4 @@ const List = ({ children}) => {
 
 export default List
 
-// Destructuring props object to access 'toDoItem' prop with { }, see the Button.jsx note
+// Destructuring props object to access 'toDoItem' prop with { }, see the Button.jsx not

@@ -3,9 +3,9 @@
 ---
 
 # Intro
-This project was created in my 13th week of coding bootcamp, using React and CSS. The concepts of Javascript and HTML are indirectly used through my JSX returns. 
+This mini-project was created in my 13th week of coding bootcamp, using React and CSS. The concepts of Javascript and HTML are indirectly used through my JSX returns. 
 
-Note: While typically I have a section for "what I learned", in this write-up, my learnings are integrated in my discussion about the components and functions.
+Note: While typically I have a seperate section for "what I learned", in this write-up, my learnings are integrated in my discussion about the components and functions.
 
 ---
 
@@ -176,4 +176,36 @@ We use `useEffect` here because this function is tightly coupled with the state 
 ---
 # Demo 
 I've recorded a quick ~ one minute demo that shows the user experience flow. 
-You may watch that video [here](src/assets/todo-app-demo.mov).
+You may watch that video [here](https://www.youtube.com/watch?v=YzwvWlxyoOs).
+
+---
+# Thinking Ahead
+My List.jsx is currently only presentational, with the parent component of the ToDo taking the List component and mapping over it. The advantages of keeping it presentational (as it solely determines how a list is rendered visually) are 1.) simplicity 2.) easier to test and maintain 3.) more reusable as `List` can be used for difffent types of content. However, another approach is to move mapping logic to `List` which will allow for a cleaner parent component. 
+
+This would look like this:
+
+In `List`, it receives the `stuffToDo` with a prop variable of `items` and it's mapped over.
+```
+const List = ({ items }) => {
+    return (
+        <ul>
+            {items.map((item, index) => (
+                <li key={index}>{item}</li>
+            ))}
+        </ul>
+    );
+};
+
+export default List;
+```
+
+Then, in the parent component `ToDo`, the `stuffToDO` is passed to the `List`. You can see how we simply just need to call the `List` component. 
+
+```
+return (
+        <div className="todo-container">
+            <h1>To-Do List</h1>
+            <List items={toDoItems} />
+        </div>
+    );
+```
